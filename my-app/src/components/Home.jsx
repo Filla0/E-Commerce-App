@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCard from './ProductCard';
+import Header from './Header';
 
 function Home() {
   // Sample product data (replace with your own product data)
@@ -21,6 +22,7 @@ function Home() {
 
   return (
     <div className="home">
+      <Header/>
       <h1 style={{ textAlign: 'center' }}>Welcome to our E-commerce Store</h1>
 
       <h2 style={{ textAlign: 'center' }}>Featured Products</h2>
