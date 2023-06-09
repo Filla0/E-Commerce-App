@@ -1,0 +1,57 @@
+.home {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .title,
+  .subtitle,
+  .slideshow-title {
+    margin-bottom: 20px;
+  }
+  
+  .product-list {
+    margin-bottom: 40px;
+  }
+  
+  .bar {
+    background-color: #61dafb;
+    height: 4px;
+    margin: 20px auto;
+    max-width: 300px;
+  }
+  
+  .slideshow {
+    margin-top: 40px;
+  }
+  
+  .slick-dots {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .slick-dots li {
+    margin: 0 4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slick-dots button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+  }
+  
+  .slick-dots button:before {
+    content: "•";
+    color: #61dafb;
+    font-size: 24px;
+  }
+  
+  .slick-dots .slick-active button:before {
+    color: #282c34;
+  }
+  
