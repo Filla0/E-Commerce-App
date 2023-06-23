@@ -3,86 +3,116 @@ import Slider from 'react-slick';
 import ProductCard from './ProductCard';
 import Header from './Header';
 import './HomeStyle.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-function Home() {
-  // Sample product data (replace with your own product data)
-  const products = [
-    {
-      id: 1,
-      name: 'Product 1',
-      price: 29.99,
-      imageUrl: 'product1.jpg',
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      price: 39.99,
-      imageUrl: 'product2.jpg',
-    },
-    // Add more product objects as needed
-  ];
-
-  // Configuration for the React Slick slideshow
-  const slideshowSettings = {
+// Slideshow component
+const Slideshow = () => {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-    ],
-    appendDots: dots => (
-      <div>
-        <ul style={{ margin: "0px", padding: "0px" }}> {dots} </ul>
-      </div>
-    ),
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
-    <div className="home">
-      <Header />
-      <h1 className="title">Quip</h1>
+    <div className="slideshow">
+      <Slider {...settings}>
+        <div>
+        <img src="https://images.pexels.com/photos/17213029/pexels-photo-17213029/free-photo-of-woman-in-white-clothes-walking-across-parking-lot-in-front-of-retro-volkswagen-camper.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 1" />
+        </div>
+        <div className="slide-item">
+          <img src="https://images.pexels.com/photos/12156300/pexels-photo-12156300.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 2" />
+        </div>
+        <div className="slide-item">
+          <img src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 3" />
+        </div>
+      </Slider>
+    </div>
+  );
+};
 
-      <h2 className="subtitle">Top Picks</h2>
-      <div className="product-list">
-        <Slider {...slideshowSettings}>
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </Slider>
-      </div>
-
-      <div className="bar"></div>
-
-      <h2 className="slideshow-title">Featured Items</h2>
-      <div className="slideshow">
-        <Slider {...slideshowSettings}>
-          <div className="slideshow-item">
-            <img src="slide1.jpg" alt="Slide 1" />
-            <h3>Slide 1</h3>
-            <p>Content for Slide 1</p>
+// Trending component
+const Trending = () => {
+  return (
+    <div className="trending-container">
+      <h2>Trending This Week</h2>
+      <div className="trending-photos">
+        <div className="photo-item">
+          <img src="" alt="Photo 1" />
+          <div className="overlay">
+            <h3>Model 1</h3>
+            <p>Click for details</p>
           </div>
-          <div className="slideshow-item">
-            <img src="slide2.jpg" alt="Slide 2" />
-            <h3>Slide 2</h3>
-            <p>Content for Slide 2</p>
+        </div>
+        <div className="photo-item">
+          <img src="" alt="Photo 2" />
+          <div className="overlay">
+            <h3>Model 2</h3>
+            <p>Click for details</p>
           </div>
-          <div className="slideshow-item">
-            <img src="slide3.jpg" alt="Slide 3" />
-            <h3>Slide 3</h3>
-            <p>Content for Slide 3</p>
+        </div>
+        <div className="photo-item">
+          <img src="" alt="Photo 3" />
+          <div className="overlay">
+            <h3>Model 3</h3>
+            <p>Click for details</p>
           </div>
-        </Slider>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+// Shop component
+const Shop = () => {
+  return (
+    <div className="shop-container">
+      <h2>Shop on Sport</h2>
+      <div className="shop-items">
+        <div className="shop-item">
+          <img src="https://example.com/sport1.jpg" alt="Sport Item 1" />
+          <div className="item-details">
+            <h3>Sport Item 1</h3>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div className="shop-item">
+          <img src="https://example.com/sport2.jpg" alt="Sport Item 2" />
+          <div className="item-details">
+            <h3>Sport Item 2</h3>
+            <p>$39.99</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div className="shop-item">
+          <img src="https://example.com/sport3.jpg" alt="Sport Item 3" />
+          <div className="item-details">
+            <h3>Sport Item 3</h3>
+            <p>$49.99</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Home component
+const Home = () => {
+  return (
+    <div className="home">
+      <Header />
+      <Slideshow />
+      <hr className="divider" />
+      <Trending />
+      <Shop />
+    </div>
+  );
+};
 
 export default Home;

@@ -1,10 +1,14 @@
 :root {
-  --primary-color: #282c34;
-  --secondary-color: #61dafb;
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
   --font-family: Arial, sans-serif;
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,13 +34,13 @@
 
 .nav-item a {
   text-decoration: none;
-  color: white;
+  color: var(--secondary-color); /* Updated to black */
   font-weight: 600;
   transition: color 0.3s ease-in-out;
 }
 
 .nav-item a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color); /* Updated to white */
 }
 
 .menu-toggle {
@@ -72,60 +76,4 @@
   .menu-toggle {
     display: block;
   }
-}
-.home {
-  text-align: center;
-  padding: 40px;
-}
-
-.title,
-.subtitle,
-.slideshow-title {
-  margin-bottom: 20px;
-}
-
-.product-list {
-  margin-bottom: 40px;
-}
-
-.bar {
-  background-color: #61dafb;
-  height: 4px;
-  margin: 20px auto;
-  max-width: 300px;
-}
-
-.slideshow {
-  margin-top: 40px;
-}
-
-.slick-dots {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-
-.slick-dots li {
-  margin: 0 4px;
-  display: flex;
-  align-items: center;
-}
-
-.slick-dots button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
-  outline: none;
-}
-
-.slick-dots button:before {
-  content: "•";
-  color: #61dafb;
-  font-size: 24px;
-}
-
-.slick-dots .slick-active button:before {
-  color: #282c34;
 }
