@@ -1,16 +1,71 @@
 /* HomeStyle.css */
 
+/* Body */
+body {
+  background-color: #2b2b2b; /* Dark grey */
+  color: #ffffff; /* Mono text color */
+  font-family: "Courier New", monospace; /* Mono font */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box; /* Added to include padding and border within the width */
+}
+
+.content-section {
+  border-radius: 50px;
+  background: #1f1f1f;
+  box-shadow: 50px 50px 100px #0c0c0c, -50px -50px 100px #323232;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box; /* Added to include padding and border within the width */
+}
+
+.content-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 /* Slideshow */
 .slideshow {
-  margin: 40px auto; /* Increase the top margin to create more room */
-  max-width: 800px;
-  position: relative;
+  width: 100%;
+  background-color: #000000; /* Black */
+  color: black;
+  border-radius: 50px;
+  background: #1f1f1f;
+  box-shadow: 50px 50px 100px #0c0c0c, -50px -50px 100px #323232;
+}
+
+.slideshow-container {
+  background-color: #000000; /* Black */
+}
+
+.secondary-background {
+  background-color: #222222; /* Secondary background color */
+}
+
+.slide-item {
+  display: flex;
+  justify-content: center;
+}
+
+.slide-item img {
+  width: 100%;
+  height: auto;
 }
 
 /* Trending */
 .trending-container {
   text-align: center;
-  margin: 40px 0;
+  padding: 40px 0;
+  background-color: #ffffff; /* Black */
+  color: #000000; /* White */
+  width: 100%;
 }
 
 .trending-container h2 {
@@ -31,7 +86,6 @@
 
 .photo-item img {
   width: 100%;
-  max-width: 300px;
   height: auto;
   display: block;
 }
@@ -42,7 +96,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  color: #ffffff;
   padding: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -61,7 +115,10 @@
 /* Shop */
 .shop-container {
   text-align: center;
-  margin: 40px 0;
+  padding: 40px 0;
+  background-color: #000000; /* Black */
+  color: #ffffff; /* White */
+  width: 100%;
 }
 
 .shop-container h2 {
@@ -82,13 +139,12 @@
 
 .shop-item img {
   width: 100%;
-  max-width: 300px;
   height: auto;
   display: block;
 }
 
 .item-details {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 10px;
   position: absolute;
   bottom: 0;
@@ -116,10 +172,9 @@
 /* General */
 .home {
   padding: 20px;
+  width: 100%;
 }
 
 .divider {
-  border: none;
-  border-top: 2px dashed #ccc; /* Custom design for the divider */
-  margin: 40px 0;
+  display: none; /* Removed the divider */
 }

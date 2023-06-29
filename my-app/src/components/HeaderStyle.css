@@ -1,7 +1,8 @@
 :root {
-  --primary-color: #ffffff;
-  --secondary-color: #000000;
-  --font-family: Arial, sans-serif;
+  --primary-color: #2b2b2b; /* Dark grey */
+  --secondary-color: #ffffff; /* Mono text color */
+  --accent-color: #ffea00; /* Yellow */
+  --font-family: "Courier New", monospace; /* Mono font */
 }
 
 .header {
@@ -14,7 +15,14 @@
   justify-content: space-between;
   background-color: var(--primary-color);
   padding: 10px;
+  transition: top 0.3s; /* Added transition property */
+  z-index: 1000; /* Added z-index to ensure the header is on top of other elements */
 }
+
+.header.scrolled {
+  top: -80px; /* Adjust this value to control how much the header is hidden */
+}
+
 
 .logo img {
   height: 40px;
@@ -34,13 +42,16 @@
 
 .nav-item a {
   text-decoration: none;
-  color: var(--secondary-color); /* Updated to black */
+  color: var(--secondary-color);
   font-weight: 600;
   transition: color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family);
 }
 
 .nav-item a:hover {
-  color: var(--primary-color); /* Updated to white */
+  color: var(--accent-color);
 }
 
 .menu-toggle {
@@ -54,12 +65,12 @@
   display: block;
   width: 30px;
   height: 5px;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   margin-bottom: 5px;
 }
 
 .open .menu-toggle span {
-  background-color: #000;
+  background-color: var(--accent-color);
 }
 
 .open .nav-list {
