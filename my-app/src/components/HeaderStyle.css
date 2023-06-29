@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #2b2b2b; /* Dark grey */
-  --secondary-color: #ffffff; /* Mono text color */
+  --primary-color: #ffffff; /* White */
+  --secondary-color: #000000; /* Black */
   --accent-color: #ffea00; /* Yellow */
   --font-family: "Courier New", monospace; /* Mono font */
 }
@@ -15,14 +15,13 @@
   justify-content: space-between;
   background-color: var(--primary-color);
   padding: 10px;
-  transition: top 0.3s; /* Added transition property */
-  z-index: 1000; /* Added z-index to ensure the header is on top of other elements */
+  transition: top 0.3s;
+  z-index: 1000;
 }
 
 .header.scrolled {
-  top: -80px; /* Adjust this value to control how much the header is hidden */
+  top: -80px;
 }
-
 
 .logo img {
   height: 40px;

@@ -1,9 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Header from './Header';
-import airForcesImage from '../components/TrendingThisWeak/product1.png';
-import airForcesImage from '../components/TrendingThisWeak/product2.png';
-import airForcesImage from '../components/TrendingThisWeak/product1.png';
+
 import './HomeStyle.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -137,7 +135,7 @@ const Slideshow2 = () => {
   ];
 
   return (
-    <div className="slideshow">
+    <div className="slideshow2">
       <Slider {...settings}>
         {slideItems.map((item, index) => (
           <div key={index} className="slide-item">
@@ -157,27 +155,27 @@ const Slideshow2 = () => {
 const Trending = () => {
   return (
     <div className="trending-container">
-      <h2>Trending This Week</h2>
+      <h2></h2>
       <div className="trending-photos">
         <div className="photo-item">
-          <img src={product1} alt="Photo 1" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1920px-Logo_NIKE.svg.png" alt="Photo 1" />
           <div className="overlay">
             <h3>Model 1</h3>
-            <p>Click for details</p>
+            <p>Nike</p>
           </div>
         </div>
         <div className="photo-item">
-          <img src="https://example.com/photo2.jpg" alt="Photo 2" />
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/03/A_Bathing_Ape_%28logo%29.png" alt="Photo 2" />
           <div className="overlay">
             <h3>Model 2</h3>
-            <p>Click for details</p>
+            <p>Babesta</p>
           </div>
         </div>
         <div className="photo-item">
-          <img src="https://example.com/photo3.jpg" alt="Photo 3" />
+          <img src="https://1000logos.net/wp-content/uploads/2021/05/Off-White-logo.png" alt="Photo 3" />
           <div className="overlay">
             <h3>Model 3</h3>
-            <p>Click for details</p>
+            <p>Offwhite</p>
           </div>
         </div>
       </div>
