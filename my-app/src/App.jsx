@@ -10,10 +10,11 @@ import ShoppingCart from './components/ShoppingCart';
 import Checkout from './components/Checkout';
 import UserAccount from './components/UserAccount';
 import AboutUs from './components/AboutUs';
-import ContactUs from './components/ContactUs';
+// import ContactUs from './components/ContactUs';
 import FAQs from './components/FAQs';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from './components/TermsAndConditions';
+import SignIn from './components/SignIn/SignIn';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         <Route path="/checkout" element={<Checkout/>} />
         <Route path="/account" element={<UserAccount />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/SignIn" element={<SignIn />} />
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsAndConditions />} />
